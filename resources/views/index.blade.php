@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Phonebook CRUD/h2>
+                    <h2>Phonebook CRUD</h2>
                 </div>
                 <div class="pull-right mb-2">
                     <a class="btn btn-success" href="{{ route('views.create') }}"> Create phonenumber</a>
@@ -40,7 +40,7 @@
                     <td>{{ $phonebook->id }}</td>
                     <td>{{ $phonebook->firstname }}</td>
                     <td>{{ $phonebook->lastname }}</td>
-                    <td>{{ $phonebook->phonenumber }}</td>
+                    <td>{{ $phonebook->number }}</td>
                     <td>
                         <form action="{{ route('views.destroy',$phonebook->id) }}" method="Post">
                             <a class="btn btn-primary" href="{{ route('views.edit',$phonebook->id) }}">Edit</a>

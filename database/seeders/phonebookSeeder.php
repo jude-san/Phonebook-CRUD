@@ -24,7 +24,7 @@ class phonebookSeeder extends Seeder
             Phonebook::create([
                 'firstname' => $faker->firstName,
                 'lastname' => $faker->lastName,
-                'number' => $faker->phoneNumber,
+                'number' => $faker->numerify('+233#########'),
             ]);
         }
     }

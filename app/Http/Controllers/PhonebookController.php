@@ -31,6 +31,7 @@ class PhonebookController extends Controller
 
     public function create()
     {
+
         return view('create');
     }
 
@@ -47,14 +48,14 @@ class PhonebookController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'fristname' => 'required',
+            'firstname' => 'required',
             'lastname' => 'required',
-            'phonenumber' => 'required',
+            'number' => 'required | numeric | min:10',
         ]);
 
         Phonebook::create($request->post());
 
-        return redirect()->route('index')->with('success', 'Phone Address has been created successfully.');
+        return redirect()->route('views.index')->with('success', 'Phone Address has been created successfully.');
     }
 
 
@@ -68,7 +69,7 @@ class PhonebookController extends Controller
      */
     public function show(Phonebook $phonebook)
     {
-        return view('show', compact('phonebook'));
+        return view('views.show', compact('phonebook'));
     }
 
 
@@ -82,7 +83,7 @@ class PhonebookController extends Controller
      */
     public function edit(Phonebook $ponebook)
     {
-        return view('edit', compact('phonebook'));
+        return view('views.edit', compact('phonebook'));
     }
 
 
@@ -105,7 +106,7 @@ class PhonebookController extends Controller
 
         $phonebook->fill($request->post())->save();
 
-        return redirect()->route('index')->with('success', 'Phonebook address Has Been updated successfully');
+        return redirect()->route('views.index')->with('success', 'Phonebook address Has Been updated successfully');
     }
 
 
@@ -119,6 +120,6 @@ class PhonebookController extends Controller
     public function destroy(Phonebook $phonebook)
     {
         $phonebook->delete();
-        return redirect()->route('index')->with('success', 'Phonebook Address has been deleted successfully');
+        return redirect()->route('views.index')->with('success', 'Phonebook Address has been deleted successfully');
     }
 }
