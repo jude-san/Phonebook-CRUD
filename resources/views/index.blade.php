@@ -27,7 +27,7 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>S.No</th>
+                    <!-- <th>S.No</th> -->
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Phone Number</th>
@@ -37,7 +37,7 @@
             <tbody>
                 @foreach ($phonebooks as $phonebook)
                 <tr>
-                    <td>{{ $phonebook->id }}</td>
+                    <!-- <td>{{ $phonebook->id }}</td> -->
                     <td>{{ $phonebook->firstname }}</td>
                     <td>{{ $phonebook->lastname }}</td>
                     <td>{{ $phonebook->number }}</td>

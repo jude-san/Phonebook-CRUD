@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Phonebook;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+// use DB;
 
 class PhonebookController extends Controller
 {
@@ -16,6 +18,8 @@ class PhonebookController extends Controller
     public function index()
     {
         $phonebooks = Phonebook::orderBy('id')->paginate(10);
+        // $name = Phonebook::select("id", DB::raw("CONCAT(firstname, ' ', lastname) as fullname"))->get();
+        // dd($phonebook);
 
         return view('index', compact('phonebooks'));
     }
