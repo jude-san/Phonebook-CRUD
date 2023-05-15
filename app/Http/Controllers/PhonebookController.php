@@ -16,6 +16,7 @@ class PhonebookController extends Controller
     public function index()
     {
         $phonebooks = Phonebook::orderBy('id')->paginate(10);
+
         return view('index', compact('phonebooks'));
     }
 
@@ -50,7 +51,7 @@ class PhonebookController extends Controller
         $request->validate([
             'firstname' => 'required',
             'lastname' => 'required',
-            'number' => 'required | numeric | min:10',
+            'number' => 'required | numeric | digits:10',
         ]);
 
         Phonebook::create($request->post());
@@ -64,7 +65,6 @@ class PhonebookController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\company  $company
      * @return \Illuminate\Http\Response
      */
     public function show(Phonebook $phonebook)
@@ -78,12 +78,14 @@ class PhonebookController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function edit(Phonebook $ponebook)
+    public function edit($phonebook)
     {
-        return view('views.edit', compact('phonebook'));
+        // dd($phonebook);
+        $phonebook = Phonebook::find($phonebook);
+
+        return view('edit', compact('phonebook'));
     }
 
 
@@ -93,15 +95,16 @@ class PhonebookController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\company  $company
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Phonebook $phonebook)
+    public function update(Request $request,  $phonebook)
     {
+        $phonebook = Phonebook::find($phonebook);
+
         $request->validate([
             'firstname' => 'required',
             'lastname' => 'required',
-            'phonenumber' => 'required',
+            'number' => 'required | numeric | digits:10',
         ]);
 
         $phonebook->fill($request->post())->save();
@@ -114,12 +117,12 @@ class PhonebookController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
     public function destroy(Phonebook $phonebook)
     {
         $phonebook->delete();
+
         return redirect()->route('views.index')->with('success', 'Phonebook Address has been deleted successfully');
     }
 }

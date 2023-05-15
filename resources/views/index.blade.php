@@ -43,7 +43,7 @@
                     <td>{{ $phonebook->number }}</td>
                     <td>
                         <form action="{{ route('views.destroy',$phonebook->id) }}" method="Post">
-                            <a class="btn btn-primary" href="{{ route('views.edit',$phonebook->id) }}">Edit</a>
+                            <a class="btn btn-primary" href="{{ route( 'views.edit' , $phonebook->id ) }}">Edit</a>
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>

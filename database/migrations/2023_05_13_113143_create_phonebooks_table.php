@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('phonebooks', function (Blueprint $table) {
-            $table->id();
+            $table->id()->nullable(false);
             $table->timestamps();
-            $table->string('firstname');
-            $table->string('lastname');
-            $table->string('number');
+            $table->string('firstname')->nullable(false);
+            $table->string('lastname')->nullable(false);
+            $table->string('number')->nullable(false);
         });
     }
 
