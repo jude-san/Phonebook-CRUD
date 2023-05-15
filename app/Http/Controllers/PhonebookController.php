@@ -119,8 +119,10 @@ class PhonebookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Phonebook $phonebook)
+    public function destroy($phonebook)
     {
+        $phonebook = Phonebook::find($phonebook);
+
         $phonebook->delete();
 
         return redirect()->route('views.index')->with('success', 'Phonebook Address has been deleted successfully');
