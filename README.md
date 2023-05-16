@@ -25,8 +25,22 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 -   Open your terminal
 -   Locate the directory containing this repo.
 -   copy & paste this code `composer update` to install and update dependencies for the app.
+-   Change file named `.env.example` to `.env`
 -   Run this `php artisan key:generate`
 -   Update your database variables in the environment file (`.env`)
+
+```
+{
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=phonebook_crud
+DB_USERNAME=##########
+DB_PASSWORD=##########
+}
+```
+
+-   Have fun :joy
 
 ## Contributing
 
