@@ -40,7 +40,9 @@ DB_PASSWORD=##########
 }
 ```
 
--   Have fun :thumbs:
+-   Run this `php artisan migrate` , choose ==y== to create the app database if none existed.
+-   ==Optional== To pre-load data into your database type run `php artisan db:seed`
+-   Have fun :thumbsup:
 
 ## Contributing
 
