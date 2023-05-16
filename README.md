@@ -26,7 +26,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 -   Locate the directory containing this repo.
 -   copy & paste this code `composer update` to install and update dependencies for the app.
 -   Run this `php artisan key:generate`
--   Update your database variables in the environment file[.env]
+-   Update your database variables in the environment file (`.env`)
 
 ## Contributing
 
