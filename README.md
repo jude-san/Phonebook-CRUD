@@ -40,7 +40,7 @@ DB_PASSWORD=##########
 }
 ```
 
--   Have fun :joy
+-   Have fun :joy:
 
 ## Contributing
 
