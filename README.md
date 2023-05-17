@@ -27,7 +27,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 -   copy & paste this code `composer update` to install and update dependencies for the app.
 -   Change file named `.env.example` to `.env`
 -   Run this `php artisan key:generate`
--   Update your database variables in the environment file (`.env`)
+-   Update your database configurations in the environment file (`.env`)
 
 ```
 {
@@ -40,8 +40,9 @@ DB_PASSWORD=##########
 }
 ```
 
--   Run this `php artisan migrate` , choose <mark>y</mark> to create the app database if none existed.
--   == Optional == To pre-load data into your database type run `php artisan db:seed`
+-   Run this `php artisan migrate` , choose `y` to create the app database if none existed.
+-   **OptionaL**To pre-load data into your database type run `php artisan db:seed`
+-
 -   Have fun :thumbsup:
 
 ## Contributing

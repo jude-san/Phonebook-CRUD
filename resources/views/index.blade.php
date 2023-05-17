@@ -28,8 +28,8 @@
             <thead>
                 <tr>
                     <!-- <th>S.No</th> -->
-                    <th>First Name</th>
-                    <th>Last Name</th>
+                    <th>Name</th>
+                    <!-- <th>Last Name</th> -->
                     <th>Phone Number</th>
                     <th width="280px">Action</th>
                 </tr>
@@ -38,8 +38,8 @@
                 @foreach ($phonebooks as $phonebook)
                 <tr>
                     <!-- <td>{{ $phonebook->id }}</td> -->
-                    <td>{{ $phonebook->firstname }}</td>
-                    <td>{{ $phonebook->lastname }}</td>
+                    <td>{{ $phonebook->firstname }} {{$phonebook->lastname}}</td>
+                    <!-- <td>{{ $phonebook->lastname }}</td> -->
                     <td>{{ $phonebook->number }}</td>
                     <td>
                         <form action="{{ route('views.destroy',$phonebook->id) }}" method="Post">
