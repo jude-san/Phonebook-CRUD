@@ -22,12 +22,12 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 ## Getting Started
 
 -   Make sure you have `Composer` installed on your workstation.
--   Open your terminal
+-   Open your terminal.
 -   Locate the directory containing this repo.
--   copy & paste this code `composer update` to install and update dependencies for the app.
--   Change file named `.env.example` to `.env`
--   Run this `php artisan key:generate`
--   Update your database configurations in the environment file (`.env`)
+-   Run this code `composer update` to install and update dependencies for the app.
+-   Change file named `.env.example` to `.env`.
+-   Run this `php artisan key:generate`.
+-   Update your database configurations in the environment file (`.env`).
 
 ```
 {
@@ -42,8 +42,8 @@ DB_PASSWORD=##########
 
 -   Run this `php artisan migrate` , choose `y` to create the app database if none existed.
 -   **Optional**: To pre-load data into your database type run `php artisan db:seed`
--   Run `php artisan serve`
--   127.0.0.1:8000/views
+-   Run `php artisan serve`.
+-   Open your browser and paste this link `127.0.0.1:8000/views`.
 -   Have fun :thumbsup:
 
 ## Contributing
