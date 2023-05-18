@@ -41,8 +41,9 @@ DB_PASSWORD=##########
 ```
 
 -   Run this `php artisan migrate` , choose `y` to create the app database if none existed.
--   **OptionaL**To pre-load data into your database type run `php artisan db:seed`
--
+-   **Optional**: To pre-load data into your database type run `php artisan db:seed`
+-   Run `php artisan serve`
+-   127.0.0.1:8000/views
 -   Have fun :thumbsup:
 
 ## Contributing
